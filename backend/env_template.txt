@@ -1,0 +1,19 @@
+# Flask 설정
+FLASK_ENV=development
+SECRET_KEY=dev-secret-key-change-in-production
+
+# 데이터베이스 설정 (URL 방식 - 우선순위 높음)
+# 친구의 IP 주소 사용: 192.168.65.1
+# JDBC 형식: jdbc:postgresql://192.168.65.1:5432/Retail
+# 표준 형식: postgresql://postgres:753951@192.168.65.1:5432/Retail
+DATABASE_URL=jdbc:postgresql://192.168.65.1:5432/Retail
+
+# 데이터베이스 설정 (개별 값 - DATABASE_URL이 없을 때 사용)
+DB_HOST=192.168.65.1
+DB_PORT=5432
+DB_NAME=Retail
+DB_USER=postgres
+DB_PASSWORD=753951
+
+# CORS 설정
+CORS_ORIGINS=http://localhost:5173

@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Installing dependencies..."
+      - cd frontend
+      - npm install
+  build:
+    commands:
+      - echo "Building React (Vite) app..."
+      - npm run build
+
+artifacts:
+  base-directory: frontend
+  files:
+    - '**/*'
